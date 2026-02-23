@@ -8,11 +8,11 @@ import pickle
 app = FastAPI(title="Plant Health Monitoring API")
 
 # Load the saved artifacts
-model = tf.keras.models.load_model('plant_health_model.h5', compile=False)
-with open('scaler.pkl', 'rb') as f:
+model = tf.keras.models.load_model('models/plant_health_model.h5', compile=False)
+with open('models/scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
-with open('label_encoder.pkl', 'rb') as f:
+with open('models/label_encoder.pkl', 'rb') as f:
     le = pickle.load(f)
 
 
